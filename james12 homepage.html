@@ -1,0 +1,45 @@
+<html>
+
+<span id ="Country"style = "position:absolute;top:10;left:20"onmouseenter="Countryin()">Country</span>
+<span id="Sports" style= "position:absolute;top:10;left:500"onmouseenter="Sportsin()">Sports</span>
+
+
+		
+<span id="Countrymenu" style="position:absolute;top:30;left:20;background:#808080;visibility:hidden">
+			<div id="uk1" onmouseenter="entered (this)" onmouseleave="left(this)"  onclick= "showpage('james15UK.html')">UK</div>
+			<div id="usa1" onmouseenter="entered(this)" onmouseleave="left(this)" onclick= "showpage('https://en.wikipedia.org/wiki/United_States')">USA</div>
+			<div id="Pakistan1"onmouseenter="entered(this)"onmouseleave="left(this)">Pakistan</div>
+			<div id="India1"onmouseenter="entered(this)"onmouseleave="left(this)">India</div>
+</span>
+<span id="Sportsmenu" style="position:absolute;top:30;left:500;background:#808080;visibility:hidden">
+			<div id="Football1"onmouseenter="entered(this)" onmouseleave="left(this)" onclick = "showpage('http://www.bbc.co.uk/sport/football')">Football</div>
+			<div id="Cricket1"onmouseenter="entered(this)" onmouseleave="left(this)"onclick = "showpage('http://www.bbc.co.uk/sport/cricket')">Cricket</div>
+			<div id="Snooker1"onmouseenter="entered(this)" onmouseleave="left(this)"onclick = "showpage('http://www.bbc.co.uk/sport/snooker')">Snooker</div>
+			<div id="Golf1"onmouseenter="entered(this)" onmouseleave="left(this)"onclick = "showpage('http://www.bbc.co.uk/sport/golf')">Golf</div>
+</span>		
+<script>
+function Countryin(){
+window.document.getElementById("Countrymenu").style.visibility="visible";;; 
+window.document.getElementById("Sportsmenu").style.visibility="hidden";
+}
+function Sportsin(){
+window.document.getElementById("Sportsmenu").style.visibility="visible";
+window.document.getElementById("Countrymenu").style.visibility="hidden";
+}
+
+
+function entered(item){
+	item.style.background="blue";
+}
+
+function left(item){
+	item.style.background="#808080";
+	}
+	
+function showpage(where){
+window.open(where,'_blank',"width=400,height=500");
+
+}
+
+</script>
+</html>
